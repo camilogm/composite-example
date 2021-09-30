@@ -5,3 +5,4 @@ export * from './ls.command';
 export * from './mkdir.command';
 export * from './rm.command';
 export * from './touch.command';
+export * from './tree.command';

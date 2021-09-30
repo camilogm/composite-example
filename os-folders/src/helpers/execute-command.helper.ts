@@ -1,7 +1,7 @@
 import { UnknownCommand } from '../exceptions';
 import { Directory } from '../objects';
 import { IStateSystem } from '../interfaces/state-system.interface';
-import { Command, Mkdir, Cd, Chmod, Ls, Rm, Touch } from '../commands';
+import { Command, Mkdir, Cd, Chmod, Ls, Rm, Touch, Tree } from '../commands';
 
 const availableCommands: {
   commandName: string;
@@ -30,6 +30,10 @@ const availableCommands: {
   {
     commandName: 'chmod',
     BaseClass: Chmod,
+  },
+  {
+    commandName: 'tree',
+    BaseClass: Tree,
   },
   {
     commandName: 'exit',

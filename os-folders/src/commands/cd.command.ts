@@ -15,11 +15,10 @@ export class Cd extends Command {
 
   private moveOnCase() {
     const stateDirectory = this.currentState.subDirs.find(
-      (folder) => folder.name === this.newTarget,
+      (folder) => folder.name === this.newTarget && folder instanceof Directory,
     );
 
-    if (!stateDirectory || stateDirectory instanceof File)
-      throw new NotSuchSubDir(this.newTarget);
+    if (!stateDirectory) throw new NotSuchSubDir(this.newTarget);
 
     return {
       currentState: stateDirectory as Directory,
