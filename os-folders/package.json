@@ -1,0 +1,37 @@
+{
+  "name": "os-folders",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "start:dev": "nodemon  ./src/main.ts",
+    "start": "node ./dist/main.js",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
+  },
+  "dependencies": {
+    "prompt": "^1.2.0",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "^3.0.2",
+    "rxjs": "^6.6.6"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.36",
+    "@types/prompt": "^1.1.1",
+    "@typescript-eslint/eslint-plugin": "^4.19.0",
+    "@typescript-eslint/parser": "^4.19.0",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "nodemon": "^2.0.13",
+    "prettier": "^2.2.1",
+    "ts-loader": "^8.0.18",
+    "ts-node": "^9.1.1",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.2.3"
+  }
+}
